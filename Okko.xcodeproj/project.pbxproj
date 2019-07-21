@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA4735E522E355AF00119A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4735E422E355AF00119A9E /* AppDelegate.swift */; };
+		DA4735EC22E355B000119A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4735EB22E355B000119A9E /* Assets.xcassets */; };
+		DA4735FC22E3582300119A9E /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA4735FB22E3582300119A9E /* SplashView.xib */; };
+		DA4735FF22E3597C00119A9E /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4735FE22E3597C00119A9E /* AppWindow.swift */; };
+		DA47360222E35A0F00119A9E /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360122E35A0F00119A9E /* AppAssembly.swift */; };
+		DA47360522E35B0A00119A9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360422E35B0A00119A9E /* MainViewController.swift */; };
+		DA47360722E35CA000119A9E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360622E35CA000119A9E /* ModalViewController.swift */; };
+		DA47360A22E3632B00119A9E /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360922E3632B00119A9E /* NSObject+Extensions.swift */; };
+		DA47360D22E36A4B00119A9E /* ModalTransitioningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360C22E36A4B00119A9E /* ModalTransitioningController.swift */; };
+		DA47360F22E36D3F00119A9E /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360E22E36D3F00119A9E /* ModalPresentationController.swift */; };
+		DA47361522E388DF00119A9E /* ListViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47361422E388DF00119A9E /* ListViewStyles.swift */; };
+		DA47725E22E48B7E002D728A /* PresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47725D22E48B7E002D728A /* PresentationState.swift */; };
+		DA47726022E4A865002D728A /* VerticalScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47725F22E4A865002D728A /* VerticalScrollDirection.swift */; };
+		DAC3620B22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */; };
+		DAE3996422E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA4735E122E355AF00119A9E /* Okko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Okko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4735E422E355AF00119A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA4735EB22E355B000119A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA4735F022E355B000119A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA4735FB22E3582300119A9E /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		DA4735FE22E3597C00119A9E /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
+		DA47360122E35A0F00119A9E /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		DA47360422E35B0A00119A9E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA47360622E35CA000119A9E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		DA47360922E3632B00119A9E /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		DA47360C22E36A4B00119A9E /* ModalTransitioningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransitioningController.swift; sourceTree = "<group>"; };
+		DA47360E22E36D3F00119A9E /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		DA47361422E388DF00119A9E /* ListViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewStyles.swift; sourceTree = "<group>"; };
+		DA47725D22E48B7E002D728A /* PresentationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationState.swift; sourceTree = "<group>"; };
+		DA47725F22E4A865002D728A /* VerticalScrollDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollDirection.swift; sourceTree = "<group>"; };
+		DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPresentationController+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA4735DE22E355AF00119A9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA4735D822E355AF00119A9E = {
+			isa = PBXGroup;
+			children = (
+				DA4735E322E355AF00119A9E /* Okko */,
+				DA4735E222E355AF00119A9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA4735E222E355AF00119A9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA4735E122E355AF00119A9E /* Okko.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA4735E322E355AF00119A9E /* Okko */ = {
+			isa = PBXGroup;
+			children = (
+				DA4735F622E355D100119A9E /* Application */,
+				DA4735F722E355D800119A9E /* Presentation */,
+				DA4735F822E355E500119A9E /* Services */,
+				DA47360822E3628000119A9E /* Extensions */,
+				DA4735F922E3561A00119A9E /* Resources */,
+			);
+			path = Okko;
+			sourceTree = "<group>";
+		};
+		DA4735F622E355D100119A9E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DA4735E422E355AF00119A9E /* AppDelegate.swift */,
+				DA4735F022E355B000119A9E /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DA4735F722E355D800119A9E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DA47360322E35ACD00119A9E /* Controllers */,
+				DA4735FD22E3592300119A9E /* Components */,
+				DA47361322E3889500119A9E /* Styles */,
+				DA47361822E3921300119A9E /* Models */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DA4735F822E355E500119A9E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA47360022E359CD00119A9E /* Assemblies */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA4735F922E3561A00119A9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA4735EB22E355B000119A9E /* Assets.xcassets */,
+				DA4735FB22E3582300119A9E /* SplashView.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA4735FD22E3592300119A9E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DA4735FE22E3597C00119A9E /* AppWindow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DA47360022E359CD00119A9E /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				DA47360122E35A0F00119A9E /* AppAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		DA47360322E35ACD00119A9E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA47360422E35B0A00119A9E /* MainViewController.swift */,
+				DA47360622E35CA000119A9E /* ModalViewController.swift */,
+				DA47360C22E36A4B00119A9E /* ModalTransitioningController.swift */,
+				DA47360E22E36D3F00119A9E /* ModalPresentationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA47360822E3628000119A9E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA47360922E3632B00119A9E /* NSObject+Extensions.swift */,
+				DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */,
+				DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA47361322E3889500119A9E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				DA47361422E388DF00119A9E /* ListViewStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		DA47361822E3921300119A9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA47725D22E48B7E002D728A /* PresentationState.swift */,
+				DA47725F22E4A865002D728A /* VerticalScrollDirection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA4735E022E355AF00119A9E /* Okko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4735F322E355B000119A9E /* Build configuration list for PBXNativeTarget "Okko" */;
+			buildPhases = (
+				DA4735DD22E355AF00119A9E /* Sources */,
+				DA4735DE22E355AF00119A9E /* Frameworks */,
+				DA4735DF22E355AF00119A9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Okko;
+			productName = Okko;
+			productReference = DA4735E122E355AF00119A9E /* Okko.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA4735D922E355AF00119A9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alexey Karataev";
+				TargetAttributes = {
+					DA4735E022E355AF00119A9E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = DA4735DC22E355AF00119A9E /* Build configuration list for PBXProject "Okko" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA4735D822E355AF00119A9E;
+			productRefGroup = DA4735E222E355AF00119A9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA4735E022E355AF00119A9E /* Okko */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA4735DF22E355AF00119A9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4735EC22E355B000119A9E /* Assets.xcassets in Resources */,
+				DA4735FC22E3582300119A9E /* SplashView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA4735DD22E355AF00119A9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE3996422E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift in Sources */,
+				DA47361522E388DF00119A9E /* ListViewStyles.swift in Sources */,
+				DA47360222E35A0F00119A9E /* AppAssembly.swift in Sources */,
+				DA4735FF22E3597C00119A9E /* AppWindow.swift in Sources */,
+				DAC3620B22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift in Sources */,
+				DA47726022E4A865002D728A /* VerticalScrollDirection.swift in Sources */,
+				DA47360522E35B0A00119A9E /* MainViewController.swift in Sources */,
+				DA47360A22E3632B00119A9E /* NSObject+Extensions.swift in Sources */,
+				DA47725E22E48B7E002D728A /* PresentationState.swift in Sources */,
+				DA47360722E35CA000119A9E /* ModalViewController.swift in Sources */,
+				DA47360D22E36A4B00119A9E /* ModalTransitioningController.swift in Sources */,
+				DA47360F22E36D3F00119A9E /* ModalPresentationController.swift in Sources */,
+				DA4735E522E355AF00119A9E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA4735F122E355B000119A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA4735F222E355B000119A9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA4735F422E355B000119A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U67ZU8H7H4;
+				INFOPLIST_FILE = "$(SRCROOT)/Okko/Application/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.akarataev.Okko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA4735F522E355B000119A9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U67ZU8H7H4;
+				INFOPLIST_FILE = "$(SRCROOT)/Okko/Application/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.akarataev.Okko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA4735DC22E355AF00119A9E /* Build configuration list for PBXProject "Okko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4735F122E355B000119A9E /* Debug */,
+				DA4735F222E355B000119A9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4735F322E355B000119A9E /* Build configuration list for PBXNativeTarget "Okko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4735F422E355B000119A9E /* Debug */,
+				DA4735F522E355B000119A9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA4735D922E355AF00119A9E /* Project object */;
+}
