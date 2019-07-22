@@ -10,6 +10,11 @@ import UIKit
 
 final class AppWindow: UIWindow {
     
+    static var safeAreaInsets: UIEdgeInsets? {
+        let window = UIApplication.shared.keyWindow
+        return window?.safeAreaInsets
+    }
+    
     static var frame: CGRect {
         return UIScreen.main.bounds
     }

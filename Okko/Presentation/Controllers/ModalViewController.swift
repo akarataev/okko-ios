@@ -14,10 +14,14 @@ class ModalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSubviews()
         scrollView.transitionDelegate = self
-        view.addSubview(scrollView)
         scrollView.fillScrollView(with: 10)
         applyModalViewControllerStyles()
+    }
+    
+    func addSubviews() {
+        view.addSubview(scrollView)
     }
 }
 
