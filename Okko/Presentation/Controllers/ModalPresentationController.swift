@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol ModalScrollViewPresentationDelegate: class {
+    func manualScrollViewUpdate(with yScrollOffset: CGFloat)
+}
+
 class ModalPresentationController: UIPresentationController {
     
     private var state: PresentationState = .halfScreen
     private let gestureRecognizer = UIPanGestureRecognizer()
     
     var dimmingView = UIView()
+    weak var presentationDelegate: ModalScrollViewPresentationDelegate?
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
@@ -37,7 +42,11 @@ class ModalPresentationController: UIPresentationController {
             switch state {
             case .halfScreen:
                 let yOrigin = sender.touchPoint.y + hOffset
-                guard yOrigin > tOffset else { return }
+                guard yOrigin > tOffset else {
+                    let yScrollOffset = yOrigin - tOffset
+                    presentationDelegate?.manualScrollViewUpdate(with: yScrollOffset)
+                    return
+                }
                 presentedView.frame.origin.y = yOrigin
             case .threeQuarters:
                 let yOrigin = sender.touchPoint.y + tOffset
@@ -51,6 +60,12 @@ class ModalPresentationController: UIPresentationController {
         }
     }
     
+    func automaticUpdatePresentationState() {
+        switch state {
+        case .threeQuarters: setupNewPresentationState(.halfScreen)
+        case .halfScreen: presentedViewController.dismiss(animated: true) }
+    }
+    
     private func setupNewPresentationState(with direction: VerticalScrollDirection) {
         switch direction {
         case .up: setupNewPresentationState(.threeQuarters)
@@ -62,16 +77,24 @@ class ModalPresentationController: UIPresentationController {
     }
     
     private func setupNewPresentationState(_ state: PresentationState) {
-        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: { [weak self] in
+        self.state = state
+        let velocity = CGVector(dx: 0, dy: 3)
+        let parameters = UISpringTimingParameters(dampingRatio: 0.7, initialVelocity: velocity)
+        let stateAnimator = UIViewPropertyAnimator(duration: 0.8, timingParameters: parameters)
+        stateAnimator.isInterruptible = true
+        
+        stateAnimator.addAnimations {
             switch state {
-            case .halfScreen: self?.applyHalfScreenLayout()
-            case .threeQuarters: self?.applyThreeQuartersScreenLayout() }
-        }, completion: { [weak self] _ in self?.state = state })
+            case .halfScreen: self.applyHalfScreenState()
+            case .threeQuarters: self.applyThreeQuartersScreenState() }
+        }
+
+        stateAnimator.startAnimation()
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let presentedView = presentedView else { return .zero }
-        applyHalfScreenLayout()
+        applyHalfScreenState()
         return presentedView.frame
     }
     

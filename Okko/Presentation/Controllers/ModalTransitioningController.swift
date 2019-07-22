@@ -11,6 +11,8 @@ import UIKit
 final class ModalTransitioningController: NSObject, UIViewControllerTransitioningDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return ModalPresentationController(presentedViewController: presented, presenting: presenting)
+        let presentationController = ModalPresentationController(presentedViewController: presented, presenting: presenting)
+        presentationController.presentationDelegate = presented as? ModalViewController
+        return presentationController
     }
 }

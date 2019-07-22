@@ -1,5 +1,5 @@
 //
-//  ListViewStyles.swift
+//  ModalViewStyles.swift
 //  Okko
 //
 //  Created by Alexey Karataev on 20/07/2019.
@@ -8,15 +8,45 @@
 
 import UIKit
 
+extension ModalViewController {
+    
+    func applyModalViewControllerStyles() {
+        applyModalViewStyles()
+        applyBasicScrollViewLayout()
+    }
+    
+    func applyModalViewStyles() {
+        view.apply(.modalViewStyles)
+    }
+    
+    func applyBasicScrollViewLayout() {
+        scrollView.isScrollEnabled = false
+        scrollView.apply(.basicScrollViewLayout(at: view))
+    }
+}
+
+
 extension ModalPresentationController {
     
-    func applyHalfScreenLayout() {
+    func applyHalfScreenState() {
+        let presentedController = presentedViewController as? ModalViewController
+        presentedController?.scrollView.isScrollEnabled = false
+        applyHalfScreenLayout()
+    }
+    
+    private func applyHalfScreenLayout() {
         guard let containerViewFrame = containerView?.frame else { return }
         presentedView?.apply(.halfScreenLayout(
             containerViewFrame: containerViewFrame, safeAreaInsets: safeAreaInsets))
     }
     
-    func applyThreeQuartersScreenLayout() {
+    func applyThreeQuartersScreenState() {
+        let presentedController = presentedViewController as? ModalViewController
+        presentedController?.scrollView.isScrollEnabled = true
+        applyThreeQuartersScreenLayout()
+    }
+    
+    private func applyThreeQuartersScreenLayout() {
         guard let containerViewFrame = containerView?.frame else { return }
         presentedView?.apply(.threeQuartersScreenLayout(
             containerViewFrame: containerViewFrame, safeAreaInsets: safeAreaInsets))
@@ -37,6 +67,7 @@ extension ModalPresentationController {
         presentingViewController.view.transform = CGAffineTransform.identity
     }
 }
+
 
 fileprivate extension DesignSystem where UIComponent == UIView {
     
@@ -63,6 +94,7 @@ fileprivate extension DesignSystem where UIComponent == UIView {
             let origin = CGPoint(x: 0, y: yOrigin)
             let size = CGSize(width: containerViewFrame.width, height: height)
             view.frame = CGRect(origin: origin, size: size)
+            view.layoutIfNeeded()
         }
     }
     
@@ -75,6 +107,31 @@ fileprivate extension DesignSystem where UIComponent == UIView {
             let origin = CGPoint(x: 0, y: yOrigin)
             let size = CGSize(width: containerViewFrame.width, height: height)
             view.frame = CGRect(origin: origin, size: size)
+            view.layoutIfNeeded()
+        }
+    }
+    
+    static var modalViewStyles: DesignSystem {
+        return .container { view in
+            view.backgroundColor = .yellow
+            view.clipsToBounds = true
+        }
+    }
+    
+}
+
+
+fileprivate extension DesignSystem where UIComponent == ModalScrollView {
+    
+    static func basicScrollViewLayout(at target: UIView) -> DesignSystem {
+        return .container { scrollView in
+            scrollView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                scrollView.topAnchor.constraint(equalTo: target.topAnchor),
+                scrollView.bottomAnchor.constraint(equalTo: target.bottomAnchor),
+                scrollView.leftAnchor.constraint(equalTo: target.leftAnchor),
+                scrollView.rightAnchor.constraint(equalTo: target.rightAnchor)
+            ])
         }
     }
 }

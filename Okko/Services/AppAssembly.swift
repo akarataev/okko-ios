@@ -13,7 +13,6 @@ class AppAssembly {
     func setupMain(_ window: inout UIWindow?) {
         let mainVC = MainViewController()
         let rootNC = UINavigationController(rootViewController: mainVC)
-        rootNC.navigationBar.isHidden = true
         window = AppWindow()
         window?.rootViewController = rootNC
         window?.makeKeyAndVisible()

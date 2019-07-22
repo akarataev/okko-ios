@@ -10,23 +10,25 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    let gestureRecognizer = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .blue
-        
-
+        gestureRecognizer.addTarget(self, action: #selector(presentModalController(_:)))
+        view.addGestureRecognizer(gestureRecognizer)
+        applyMainViewControllerStyles()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let listVC = ModalViewController()
-        let listTC = ModalTransitioningController()
-        listVC.transitioningDelegate = listTC
-        listVC.modalPresentationStyle = .custom
-        
-        present(listVC, animated: true)
-        
+    }
+    
+    @objc func presentModalController(_ sender: UITapGestureRecognizer) {
+        let assembly = ModalAssembly()
+        assembly.presentModalController(by: self)
     }
 }

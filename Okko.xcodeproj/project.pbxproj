@@ -17,9 +17,13 @@
 		DA47360A22E3632B00119A9E /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360922E3632B00119A9E /* NSObject+Extensions.swift */; };
 		DA47360D22E36A4B00119A9E /* ModalTransitioningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360C22E36A4B00119A9E /* ModalTransitioningController.swift */; };
 		DA47360F22E36D3F00119A9E /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360E22E36D3F00119A9E /* ModalPresentationController.swift */; };
-		DA47361522E388DF00119A9E /* ListViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47361422E388DF00119A9E /* ListViewStyles.swift */; };
+		DA47361522E388DF00119A9E /* ModalViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47361422E388DF00119A9E /* ModalViewStyles.swift */; };
 		DA47725E22E48B7E002D728A /* PresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47725D22E48B7E002D728A /* PresentationState.swift */; };
 		DA47726022E4A865002D728A /* VerticalScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47725F22E4A865002D728A /* VerticalScrollDirection.swift */; };
+		DA47726422E50100002D728A /* ModalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47726322E50100002D728A /* ModalScrollView.swift */; };
+		DA47726622E5047D002D728A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47726522E5047D002D728A /* UIColor+Extensions.swift */; };
+		DA9C74EB22E60CE100EE8D0B /* ModalAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C74EA22E60CE100EE8D0B /* ModalAssembly.swift */; };
+		DA9C74ED22E60E2F00EE8D0B /* MainViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C74EC22E60E2F00EE8D0B /* MainViewStyles.swift */; };
 		DAC3620B22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */; };
 		DAE3996422E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -37,9 +41,13 @@
 		DA47360922E3632B00119A9E /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		DA47360C22E36A4B00119A9E /* ModalTransitioningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransitioningController.swift; sourceTree = "<group>"; };
 		DA47360E22E36D3F00119A9E /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
-		DA47361422E388DF00119A9E /* ListViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewStyles.swift; sourceTree = "<group>"; };
+		DA47361422E388DF00119A9E /* ModalViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewStyles.swift; sourceTree = "<group>"; };
 		DA47725D22E48B7E002D728A /* PresentationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationState.swift; sourceTree = "<group>"; };
 		DA47725F22E4A865002D728A /* VerticalScrollDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollDirection.swift; sourceTree = "<group>"; };
+		DA47726322E50100002D728A /* ModalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalScrollView.swift; sourceTree = "<group>"; };
+		DA47726522E5047D002D728A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		DA9C74EA22E60CE100EE8D0B /* ModalAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAssembly.swift; sourceTree = "<group>"; };
+		DA9C74EC22E60E2F00EE8D0B /* MainViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewStyles.swift; sourceTree = "<group>"; };
 		DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPresentationController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +114,8 @@
 		DA4735F822E355E500119A9E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DA47360022E359CD00119A9E /* Assemblies */,
+				DA47360122E35A0F00119A9E /* AppAssembly.swift */,
+				DA9C74EA22E60CE100EE8D0B /* ModalAssembly.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -124,16 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				DA4735FE22E3597C00119A9E /* AppWindow.swift */,
+				DA47726322E50100002D728A /* ModalScrollView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		DA47360022E359CD00119A9E /* Assemblies */ = {
-			isa = PBXGroup;
-			children = (
-				DA47360122E35A0F00119A9E /* AppAssembly.swift */,
-			);
-			path = Assemblies;
 			sourceTree = "<group>";
 		};
 		DA47360322E35ACD00119A9E /* Controllers */ = {
@@ -153,6 +155,7 @@
 				DA47360922E3632B00119A9E /* NSObject+Extensions.swift */,
 				DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */,
 				DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */,
+				DA47726522E5047D002D728A /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,7 +163,8 @@
 		DA47361322E3889500119A9E /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				DA47361422E388DF00119A9E /* ListViewStyles.swift */,
+				DA47361422E388DF00119A9E /* ModalViewStyles.swift */,
+				DA9C74EC22E60E2F00EE8D0B /* MainViewStyles.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -245,14 +249,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE3996422E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift in Sources */,
-				DA47361522E388DF00119A9E /* ListViewStyles.swift in Sources */,
+				DA47726622E5047D002D728A /* UIColor+Extensions.swift in Sources */,
+				DA47361522E388DF00119A9E /* ModalViewStyles.swift in Sources */,
 				DA47360222E35A0F00119A9E /* AppAssembly.swift in Sources */,
+				DA47726422E50100002D728A /* ModalScrollView.swift in Sources */,
 				DA4735FF22E3597C00119A9E /* AppWindow.swift in Sources */,
 				DAC3620B22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift in Sources */,
 				DA47726022E4A865002D728A /* VerticalScrollDirection.swift in Sources */,
 				DA47360522E35B0A00119A9E /* MainViewController.swift in Sources */,
 				DA47360A22E3632B00119A9E /* NSObject+Extensions.swift in Sources */,
+				DA9C74ED22E60E2F00EE8D0B /* MainViewStyles.swift in Sources */,
 				DA47725E22E48B7E002D728A /* PresentationState.swift in Sources */,
+				DA9C74EB22E60CE100EE8D0B /* ModalAssembly.swift in Sources */,
 				DA47360722E35CA000119A9E /* ModalViewController.swift in Sources */,
 				DA47360D22E36A4B00119A9E /* ModalTransitioningController.swift in Sources */,
 				DA47360F22E36D3F00119A9E /* ModalPresentationController.swift in Sources */,
