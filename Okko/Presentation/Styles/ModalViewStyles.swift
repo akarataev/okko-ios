@@ -78,8 +78,8 @@ fileprivate extension DesignSystem where UIComponent == UIView {
     static func dimmingViewInitialStyle(containerViewFrame: CGRect) -> DesignSystem {
         return .container { view in
             view.frame = CGRect(origin: .zero, size: containerViewFrame.size)
-            view.backgroundColor = UIColor.gray.withAlphaComponent(0.6)
-            let blurEffect = UIBlurEffect(style: .dark)
+            view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            let blurEffect = UIBlurEffect(style: .prominent)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             blurEffectView.frame = view.bounds
         }
@@ -113,11 +113,12 @@ fileprivate extension DesignSystem where UIComponent == UIView {
     
     static var modalViewStyles: DesignSystem {
         return .container { view in
-            view.backgroundColor = .yellow
+            view.backgroundColor = UIColor(rgb: 0x252A2B)
             view.clipsToBounds = true
+            view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            view.layer.cornerRadius = 16
         }
     }
-    
 }
 
 

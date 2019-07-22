@@ -14,8 +14,8 @@ protocol ModalScrollViewTransitionDelegate: class {
 
 final class ModalScrollView: UIScrollView, UIScrollViewDelegate {
     
-    private let elementOffset: CGFloat = 24
-    private let elementHeight: CGFloat = 250
+    private let elementOffset: CGFloat = 40
+    private let elementHeight: CGFloat = 400
     private let yDissmisalPosition: CGFloat = 20
     
     weak var transitionDelegate: ModalScrollViewTransitionDelegate?
@@ -42,10 +42,15 @@ final class ModalScrollView: UIScrollView, UIScrollViewDelegate {
     func fillScrollView(with elements: Int) {
         setContentSize(for: elements)
         for elementIndex in 1...elements {
-            let view = UIView()
+            let view = UIImageView()
+            view.layer.cornerRadius = 16
+            view.clipsToBounds = true
+            view.contentMode = .scaleAspectFill
             view.backgroundColor = .random
             view.frame = frame(for: elementIndex)
             addSubview(view)
+            let image = UIImage(named: "\(elementIndex)")
+            view.image = image
         }
     }
 

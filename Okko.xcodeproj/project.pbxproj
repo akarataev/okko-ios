@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA4735E522E355AF00119A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4735E422E355AF00119A9E /* AppDelegate.swift */; };
-		DA4735EC22E355B000119A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4735EB22E355B000119A9E /* Assets.xcassets */; };
 		DA4735FC22E3582300119A9E /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA4735FB22E3582300119A9E /* SplashView.xib */; };
 		DA4735FF22E3597C00119A9E /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4735FE22E3597C00119A9E /* AppWindow.swift */; };
 		DA47360222E35A0F00119A9E /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47360122E35A0F00119A9E /* AppAssembly.swift */; };
@@ -25,13 +24,13 @@
 		DA9C74EB22E60CE100EE8D0B /* ModalAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C74EA22E60CE100EE8D0B /* ModalAssembly.swift */; };
 		DA9C74ED22E60E2F00EE8D0B /* MainViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C74EC22E60E2F00EE8D0B /* MainViewStyles.swift */; };
 		DAC3620B22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */; };
+		DACD47DB22E658AF0084310A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACD47DA22E658AF0084310A /* Assets.xcassets */; };
 		DAE3996422E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA4735E122E355AF00119A9E /* Okko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Okko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4735E422E355AF00119A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA4735EB22E355B000119A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA4735F022E355B000119A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4735FB22E3582300119A9E /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		DA4735FE22E3597C00119A9E /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		DA9C74EA22E60CE100EE8D0B /* ModalAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAssembly.swift; sourceTree = "<group>"; };
 		DA9C74EC22E60E2F00EE8D0B /* MainViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewStyles.swift; sourceTree = "<group>"; };
 		DAC3620A22E3CD5400968596 /* UIPanGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		DACD47DA22E658AF0084310A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE3996322E3C1B9009EFBB1 /* UIPresentationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPresentationController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 		DA4735F922E3561A00119A9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DA4735EB22E355B000119A9E /* Assets.xcassets */,
+				DACD47DA22E658AF0084310A /* Assets.xcassets */,
 				DA4735FB22E3582300119A9E /* SplashView.xib */,
 			);
 			path = Resources;
@@ -236,7 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4735EC22E355B000119A9E /* Assets.xcassets in Resources */,
+				DACD47DB22E658AF0084310A /* Assets.xcassets in Resources */,
 				DA4735FC22E3582300119A9E /* SplashView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
