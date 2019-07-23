@@ -27,7 +27,7 @@ To complete the task, must adhere to certain restrictions for the technological 
 
 ## Requirements
 
-In order to compile Revolut entrance test you will need to meet the following requirements:
+In order to compile Okko entrance test you will need to meet the following requirements:
 ```
 - A Mac with Xcode 10 or later
 - Git command line tools or a git source control client like GitKraken
@@ -35,4 +35,4 @@ In order to compile Revolut entrance test you will need to meet the following re
 
 ## License
 
-Revolut entrance test is available under the MIT license. See the [LICENSE.md](LICENSE.md) file for more info.
+Okko entrance test is available under the MIT license. See the [LICENSE.md](LICENSE.md) file for more info.
